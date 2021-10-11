@@ -9,6 +9,11 @@ div{
     text-align: center;
     
 }
+
+li{
+    list-style-type: none;
+}
+
 #corpo{
     width: 700px;
     height: 700px;

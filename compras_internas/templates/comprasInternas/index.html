@@ -21,14 +21,29 @@
             <h1 id="apresentacao">Seja bem vindo(a) <span id="nome">{{ user }}</span> Você tem: <span >{{ user.profile.pontos }} Pontos.</span></h1>
         {% endif%}
     </div>
+
+
+
     <div id="corpo">
-        
-        <div id="oportunidades">
-            <h4>Oportunidades:</h4>
-        </div>
-        <div id="colaboradores">
-            <h4>Colaboradores:</h4>
-        </div>
+        {% if user.is_staff%}
+            <div id="oportunidades">
+                <h4>Oportunidades:</h4>
+            </div>
+            <div id="colaboradores">
+                <h4>Colaboradores:</h4>
+            </div>
+
+
+            {% else %}
+            <div style="width: 95%; padding:5px;" id="oportunidades">
+                <h4>Oportunidades:</h4>
+                <ul>
+                    <li>Coisas</li>
+                    <li>Outras coisas</li>
+                </ul>
+            </div>
+        {% endif%}
+
 
     </div>
 </html>
