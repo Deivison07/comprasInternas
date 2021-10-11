@@ -3,4 +3,4 @@ from .models import Oportunidade,Profile,Registro
 
 admin.site.register(Profile)
 admin.site.register(Oportunidade)
-#admin.site.register(Registro)
+admin.site.register(Registro)

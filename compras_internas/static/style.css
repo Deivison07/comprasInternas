@@ -33,13 +33,21 @@ li{
 }
 
 #oportunidades{
-    display: inline-block;
+    display: inline;
     width: 58%;
-    margin-top: 15px;
+    margin-top: 0px;
+    float: left;
+    border: 2px solid red;
+    text-transform: capitalize;
+    
 }
 #colaboradores{
     width: 38%;
-    display: inline-block;
+    display: inline;
+    float: right;
+    text-align: left;
+    border: 2px solid red;
+    text-transform: capitalize;
 }
 span{
     
