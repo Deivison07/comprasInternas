@@ -4,20 +4,21 @@ div{
 }
 #head{
     background-color: bisque;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 #apresentacao{
     text-align: center;
     
 }
 
-li{
-    list-style-type: none;
-}
-
 #corpo{
     width: 700px;
     height: 700px;
-    /*border: 2px solid red;*/
+    
     margin: auto;
     margin-top: 15px;
     background-color: azure;
@@ -37,22 +38,73 @@ li{
     width: 58%;
     margin-top: 0px;
     float: left;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     text-transform: capitalize;
     
+}
+#oportunidades #addOportunidades button{
+    text-align: left;
+}
+#addOportunidades a{
+    text-decoration: none;
+    padding: 10px;
+    float: right;
+    text-align: right;
+    /*margin: auto;*/
+}
+.clear{
+    clear: both;
+}
+
+#head a{
+    margin-right: 20px;
+    display: block;
+    
+    text-decoration: none;
+    font-size: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 #colaboradores{
     width: 38%;
     display: inline;
     float: right;
     text-align: left;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     text-transform: capitalize;
 }
-span{
-    
+
+#colaboradores li{
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    background-color: blue;
+}
+#oportunidades li{
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    background-color: blue;
+    text-align: left;
+}
+#oportunidades_add li{
+    height:100px ;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 250px;
+    background-color: rgb(143, 143, 199);
+    display: block;
+    text-align: left;
+    text-transform: capitalize;
+    background-image: url('download.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
     
 }
+#oportunidades_add li a{
+    margin-top: 45px;
+    text-decoration: none;
+}
+
 #nome{
     
     text-transform: capitalize;

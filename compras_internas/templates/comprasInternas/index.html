@@ -17,10 +17,10 @@
         <h1 id="apresentacao">Seja bem vindo(a) <span id="nome">{{ user }}</span> Você tem: <span >{{ user.profile.pontos }} Pontos. <a href='/accounts/logout/'>sair</a></span></h1>
     </div>
 
-
     <div id="corpo">
 
         <div style="width: 95%; padding:5px;" id="oportunidades">
+            <button id="addOportunidades" type="submit"><a href="{% url 'url_add_oportunidades' %}">Adiciconar Oportunidade</a></button>
             <h4>Oportunidades Adquiridas:</h4>
             <ul>
                 {% for row in reg%}
@@ -28,6 +28,8 @@
                 {%endfor%}
             </ul>
         </div>
+
+        <div class="clear"></div>
 
     </div>
 </html>

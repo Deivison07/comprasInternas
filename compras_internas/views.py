@@ -28,30 +28,51 @@ def login(request):
 
     return render(request,'comprasInternas/index.html',context=data)
     
-@login_required
-@staff_member_required
-def list_oportunidades(request):
-    dados = {}
-    dados['rows'] = portunidades = Oportunidade.objects.all()
-    return render(request,'comprasInternas/listagemOportunidades.html',context=dados)
 
+def list_oportunidades():
+    dados = {}
+    dados['rows'] = Oportunidade.objects.all()
+    return dados
 
 def list_User():
     data = {}
     data['rows'] = User.objects.all()
     return data
-    #return render(request, 'comprasInternas/listUsers.html', context=data)
 
 
 @login_required
 @staff_member_required
 def administrador(request):
-    list = list_User()
-    return render(request,'comprasInternas/adiministrador.html',context=list)
-
-def modificarUser(request,pk):
     data = {}
-    user = User.objects.get(pk=pk)
+    data['usuarios'] = list_User()
+    data['oportunidades']= list_oportunidades()
+
+    return render(request,'comprasInternas/adiministrador.html',context=data)
+
+@login_required
+def add_oportunidades(request,pk=None):
+    data = {}
+    if pk != None:
+        user = request.user
+        item = Oportunidade.objects.get(pk=pk)
+
+        if user.profile.pontos >= item.pontuacao:
+            user.profile.pontos = int(user.profile.pontos) - int(item.pontuacao)
+
+            user.profile.save()
+            reg = Registro()
+            reg.colaborador = user
+            reg.oportunidade = item
+            reg.save()
+            data['mensagem'] = "Adicionado com Sucesso"
+        else:
+            data['mensagem'] = "Infelizmente você não tem pontuação"
+
+
+
+    data['oportunidades'] = list_oportunidades()
+    return render(request, 'comprasInternas/addOportunidades.html', context=data)
+
 
 
 
