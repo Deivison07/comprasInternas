@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .nonfield{
+            position: absolute;
+            top: 10px;
+            left: 20%;
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 51, 0);
+            
+        }
+        .corpoForm{
+            width: 250px;
+            height: 180px;
+            margin:  auto;
+            margin-top: 200px;
+            padding: 10px;
+            background-color: rgb(197, 215, 231);
+            border-radius: 20px;
+            font-size: 15px;
+        }
+        input{
+            display: block;
+            margin-bottom: 5px;
+            width: 100%;
+            color: red;
+        }
+        form{
+            padding: 10px;
+  
+        }
+
+        #botao{
+            text-align: center;
+            width: 80%;
+            margin: auto;
+        }
+
+        #formulario{
+            margin-top: 10%;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="corpoForm">
+        <div id="formulario">
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name=" next" value="{{ next  }}">
+                {{ form }}
+                <div id="botao">
+                    <button id="botao" type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

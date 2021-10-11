@@ -1,0 +1,47 @@
+div{
+    /*border: 2px solid red;*/
+    text-align: center;
+}
+#head{
+    background-color: bisque;
+}
+#apresentacao{
+    text-align: center;
+    
+}
+#corpo{
+    width: 700px;
+    height: 700px;
+    /*border: 2px solid red;*/
+    margin: auto;
+    margin-top: 15px;
+    background-color: azure;
+    
+}
+#corpo h4{
+    text-align: left;
+    background-color: brown;
+    margin: 0px;
+    color: aliceblue;
+    font-size: 19px;
+    padding: 10px;
+}
+
+#oportunidades{
+    display: inline-block;
+    width: 58%;
+    margin-top: 15px;
+}
+#colaboradores{
+    width: 38%;
+    display: inline-block;
+}
+span{
+    
+    
+}
+#nome{
+    
+    text-transform: capitalize;
+}
+

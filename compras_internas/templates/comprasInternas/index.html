@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Contas Internas</title>
+</head>
+
+<body>
+    <div><img src="https://corretoraportalsalvador.com.br/wp-content/uploads/2021/08/Logo-CORRETORA-PORTAL.png" alt=""></div>
+    <div id="head">
+        
+        {% if user.is_staff%}
+            <h1 id="apresentacao">Seja bem vindo(a) <span id="nome">{{ user }}</span></h1>
+            <h3>Pagina do Administrador</h3>
+            {%else%}
+            <h1 id="apresentacao">Seja bem vindo(a) <span id="nome">{{ user }}</span> Você tem: <span >{{ user.profile.pontos }} Pontos.</span></h1>
+        {% endif%}
+    </div>
+    <div id="corpo">
+        
+        <div id="oportunidades">
+            <h4>Oportunidades:</h4>
+        </div>
+        <div id="colaboradores">
+            <h4>Colaboradores:</h4>
+        </div>
+
+    </div>
+</html>

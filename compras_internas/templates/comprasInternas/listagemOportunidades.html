@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidades</title>
+</head>
+<body>
+    <div>
+        <h2>Lista de Oportunidades</h2>
+    </div>
+
+    <div>
+        <ul>
+            {% for row in rows%}
+                <li>{{row.nome}} - {{row.pontuacao}} - {{row.descricao}} </li>
+            {%endfor%}
+        </ul>
+    </div>
+
+</body>
+</html>
