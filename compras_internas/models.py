@@ -6,7 +6,7 @@ class Oportunidade(models.Model):
     descricao = models.TextField()
     data = models.DateField(auto_now_add=True)
     pontuacao = models.IntegerField()
-    imagem = models.ImageField()
+    imagem = models.ImageField(upload_to='compras_internas/static/',blank=True, null=True)
 
     def __str__(self):
         return self.nome 
@@ -22,8 +22,8 @@ class Profile(models.Model):
         return str(self.user)
 
 class Registro(models.Model):
-    colaborador = models.ForeignKey(User,on_delete=models.RESTRICT)
-    oportunidade = models.ForeignKey(Oportunidade,on_delete=models.RESTRICT)
+    colaborador = models.ForeignKey(User,on_delete=models.CASCADE)
+    oportunidade = models.ForeignKey(Oportunidade,on_delete=models.CASCADE)
     
 
 

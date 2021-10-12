@@ -1,3 +1,4 @@
+
 div{
     /*border: 2px solid red;*/
     text-align: center;
@@ -12,7 +13,20 @@ div{
 }
 #apresentacao{
     text-align: center;
-    
+}
+#menu li{
+    display: inline;
+    background-color: azure;
+    padding: 12px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border: 2px solid rgb(230, 186, 186);
+}
+#menu li:hover{
+    background-color: rgb(214, 253, 253);
 }
 
 #corpo{
@@ -20,7 +34,7 @@ div{
     height: 700px;
     
     margin: auto;
-    margin-top: 15px;
+    margin-top: 35px;
     background-color: azure;
     
 }
@@ -52,14 +66,18 @@ div{
     text-align: right;
     /*margin: auto;*/
 }
+#oportunidades li .nomeOport a{
+    float: left;
+}
+#oportunidades li .deletarOport button{
+    float: right;
+}
 .clear{
     clear: both;
 }
 
 #head a{
-    margin-right: 20px;
-    display: block;
-    
+    margin-right: 20px;    
     text-decoration: none;
     font-size: 19px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
@@ -67,46 +85,72 @@ div{
 #colaboradores{
     width: 38%;
     display: inline;
-    float: right;
+    float: left;
     text-align: left;
     /*border: 2px solid red;*/
     text-transform: capitalize;
 }
 
 #colaboradores li{
+    
     margin: 10px;
     padding: 10px;
     display: block;
-    background-color: blue;
+    background-color: rgb(207, 207, 233);
 }
+#colaboradores li .nomeColab a{
+    
+    float: left;
+}
+
 #oportunidades li{
     margin: 10px;
+    height: 90px;
     padding: 10px;
     display: block;
-    background-color: blue;
+    background-color: rgb(182, 240, 232);
     text-align: left;
+    position: relative;
 }
+
+#oportunidades li .descricaoOport span{
+    position: relative;
+    top: 20px;
+    left: -10px;
+}
+
+#oportunidades li:hover{
+    background-color: rgb(127, 218, 206);
+}
+
 #oportunidades_add li{
-    height:100px ;
+    height:100px;
     margin-top: 10px;
-    padding: 10px;
-    padding-left: 250px;
+    /*padding-left: 200px;*/
     background-color: rgb(143, 143, 199);
     display: block;
     text-align: left;
     text-transform: capitalize;
-    background-image: url('download.jpg');
+    /*background-image: url('foto.jpeg');
     background-repeat: no-repeat;
-    background-size: contain;
-    
+    background-size: contain;*/
 }
+#oportunidades_add li:hover{
+    background-color: rgb(127, 218, 206);
+}
+#oportunidades_add li img{
+    height: 100px;
+    width: 150px;
+    float: left;
+}
+
 #oportunidades_add li a{
     margin-top: 45px;
+    margin-left: 15px;
     text-decoration: none;
 }
 
 #nome{
-    
     text-transform: capitalize;
 }
 
