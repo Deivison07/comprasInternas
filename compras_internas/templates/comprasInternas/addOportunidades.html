@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Contas Internas</title>
+</head>
+
+<body>
+    <div><img src="https://corretoraportalsalvador.com.br/wp-content/uploads/2021/08/Logo-CORRETORA-PORTAL.png" alt=""></div>
+    <div id="head">
+
+        <h1 id="apresentacao">Seja bem vindo(a) <span id="nome">{{ user }}</span> Você tem: <span >{{ user.profile.pontos }} Pontos. </span></h1>
+        <ul id="menu">
+            <a href="/"><li>Home</li></a>
+            <a href='/accounts/logout/'><li>Sair</li></a>
+        </ul>
+    </div>
+    <div id="corpo">
+
+        <div id="oportunidades_add">
+            <h4>Lista de oportunidades:</h4>
+            <h5>{{mensagem}}</h5>
+        <ul>
+            {% for row in oportunidades.rows%}
+                <li>
+                    <img src="{{row.imagem}}" alt="">
+                    <a href="{% url 'url_add_item' row.id %}">{{row}} - Pontuação necessária: {{row.pontuacao}} (Pontos)</a> <br><div style="word-wrap: break-word ">{{row.descricao}}</div>
+                </li>
+                <div style="clear: both;"></div>
+                
+            {% endfor%}
+        </ul>
+        
+    </div>
+
+    </div>
+
+</body>
+</html>

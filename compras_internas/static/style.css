@@ -112,6 +112,13 @@ div{
     text-align: left;
     position: relative;
 }
+#oportunidades li img{
+    height: 100px;
+    float: right;
+    width: 150px;
+}
+
+
 
 #oportunidades li .descricaoOport span{
     position: relative;

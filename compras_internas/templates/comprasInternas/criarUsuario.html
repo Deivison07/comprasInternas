@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Contas Internas</title>
+    <style>
+        #corpo li{
+            text-align: center;
+            display: block;
+            /*border:2px solid  red;*/
+        }
+        #corpo .helptext{
+            display: none;
+        }
+        #formu {
+            width: 200px;
+            height: 150px;
+            margin: 50px auto ;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="https://corretoraportalsalvador.com.br/wp-content/uploads/2021/08/Logo-CORRETORA-PORTAL.png" alt=""></div>
+
+    <div id="head">
+
+        <h1 id="apresentacao">Seja bem vindo(a) <span id="nome">{{ user }} </span></h1>
+        <h3>Pagina do Administrador</h3>
+        <ul id="menu">
+            <a href="/"><li>Home</li></a>
+            <a href=""><li>Adicionar Oportunidade</li></a>
+            <a href=""><li>Adicionar Colaborador</li></a>
+            <a href=""><li><a href='/accounts/logout/'>sair</a></li></a>
+        </ul>
+    </div>
+
+    <div id="corpo">
+        <h4>Criar Usuario</h4>
+        <div id="formu">
+            <form method="post">
+                {% csrf_token %}
+                <form method="GET">
+                {{form.as_ul}}
+                <input type="submit" value="Enviar">
+                
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
