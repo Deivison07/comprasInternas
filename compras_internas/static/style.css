@@ -66,9 +66,18 @@ div{
     text-align: right;
     /*margin: auto;*/
 }
-#oportunidades li .nomeOport a{
+
+#oportunidades li .nomeOport img{
     float: left;
 }
+
+#oportunidades li .nomeOport a{
+    /*float: right;*/
+}
+
+
+
+
 #oportunidades li .deletarOport button{
     float: right;
 }
